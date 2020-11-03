@@ -1,0 +1,216 @@
+html {
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(
+            circle at 100% 150%,
+            #3bc1ac 24%,
+            #42d2bb 25%,
+            #42d2bb 28%,
+            #3bc1ac 29%,
+            #3bc1ac 36%,
+            #42d2bb 36%,
+            #42d2bb 40%,
+            transparent 40%,
+            transparent
+        ),
+        radial-gradient(
+            circle at 0 150%,
+            #3bc1ac 24%,
+            #42d2bb 25%,
+            #42d2bb 28%,
+            #3bc1ac 29%,
+            #3bc1ac 36%,
+            #42d2bb 36%,
+            #42d2bb 40%,
+            transparent 40%,
+            transparent
+        ),
+        radial-gradient(
+            circle at 50% 100%,
+            #42d2bb 10%,
+            #3bc1ac 11%,
+            #3bc1ac 23%,
+            #42d2bb 24%,
+            #42d2bb 30%,
+            #3bc1ac 31%,
+            #3bc1ac 43%,
+            #42d2bb 44%,
+            #42d2bb 50%,
+            #3bc1ac 51%,
+            #3bc1ac 63%,
+            #42d2bb 64%,
+            #42d2bb 71%,
+            transparent 71%,
+            transparent
+        ),
+        radial-gradient(
+            circle at 100% 50%,
+            #42d2bb 5%,
+            #3bc1ac 6%,
+            #3bc1ac 15%,
+            #42d2bb 16%,
+            #42d2bb 20%,
+            #3bc1ac 21%,
+            #3bc1ac 30%,
+            #42d2bb 31%,
+            #42d2bb 35%,
+            #3bc1ac 36%,
+            #3bc1ac 45%,
+            #42d2bb 46%,
+            #42d2bb 49%,
+            transparent 50%,
+            transparent
+        ),
+        radial-gradient(
+            circle at 0 50%,
+            #42d2bb 5%,
+            #3bc1ac 6%,
+            #3bc1ac 15%,
+            #42d2bb 16%,
+            #42d2bb 20%,
+            #3bc1ac 21%,
+            #3bc1ac 30%,
+            #42d2bb 31%,
+            #42d2bb 35%,
+            #3bc1ac 36%,
+            #3bc1ac 45%,
+            #42d2bb 46%,
+            #42d2bb 49%,
+            transparent 50%,
+            transparent
+        );
+    background-size: 100px 50px;
+}
+
+.tab {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.showPending,
+.showCompleted {
+    cursor: pointer;
+    background: rgba(104, 4, 130, 0.6);
+    border: 0;
+    padding: 1rem;
+    width: 10rem;
+    align-self: flex-end;
+    flex: 1;
+}
+
+.showPending {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.showCompleted {
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.wrapper {
+    padding: 2rem;
+    width: 50rem;
+    margin: 0 auto;
+
+    border-radius: 1rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: start;
+    margin: 0 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    flex: 10;
+}
+
+.tasks {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.tasks li {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0 1rem;
+    font-weight: 100;
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: wheat;
+    font-size: 1.5rem;
+}
+
+.tasks p {
+    flex: 20;
+}
+
+.completed,
+.remove {
+    flex: 1;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    padding: 0;
+}
+
+/* ???? */
+button:focus-visible {
+    background: #3bc1ac;
+    border: 0;
+    outline: none;
+}
+
+.add-tasks {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.add-tasks input[type="submit"],
+input[type="text"] {
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    outline: 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    flex: 1;
+    border-radius: 1rem;
+}
+.add-tasks input[type="submit"] {
+    background: rgba(104, 4, 130, 0.6);
+    /* // de7af7 */
+}
+.add-tasks input[type="color"] {
+    border-radius: 1rem;
+    width: auto;
+    height: 5rem;
+    outline: 0;
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}

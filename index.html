@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Task Tracker</title>
+        <link
+            rel="stylesheet"
+            type="text/css"
+            media="screen"
+            href="style.css"
+        />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="tab">
+                <h2 class="title">Pending Tasks</h2>
+                <button class="showPending">Pending</button>
+                <button class="showCompleted">Completed</button>
+            </div>
+
+            <form class="add-tasks">
+                <input
+                    type="text"
+                    name="task"
+                    placeholder="Enter Task"
+                    required
+                />
+                <input type="color" name="color" value="#f5deb3" required />
+                <input type="submit" value="+ Add Task" />
+            </form>
+            <ul class="tasks">
+                <li>
+                    <p>Task to do</p>
+                    <button class="completed">✔</button>
+                    <button class="remove">✖</button>
+                </li>
+            </ul>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
